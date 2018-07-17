@@ -11,3 +11,15 @@ class DotPlot(models.Model):
 
     def __str__(self):
         return self.meeting_date
+
+
+class DotPlotStat(models.Model):
+    meeting_date = models.DateField()
+    year = models.PositiveIntegerField()
+    rate = models.FloatField()
+    count = models.PositiveIntegerField()
+    median = models.FloatField()
+
+    class Meta:
+        managed = False
+

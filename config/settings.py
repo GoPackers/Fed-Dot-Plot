@@ -25,7 +25,7 @@ SECRET_KEY = '6ye2dw+=x$+6im@y^i8i_pxvvhu!m=y6#p8bb(n+qf5(44#=1*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dotplot-dev.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition

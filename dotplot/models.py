@@ -22,4 +22,4 @@ class DotPlotStat(models.Model):
 
     class Meta:
         managed = False
-
+        get_latest_by = "meeting_date"

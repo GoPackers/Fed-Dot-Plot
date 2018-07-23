@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block container %}
+
+    <div class="container-fluid">
+        <h1>Bootstrap</h1>
+        <div id="chart"></div>
+    </div>
+
+{% endblock container %}
+
+{% block javascript %}
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="{% static 'js/chart.js' %}"></script>
+<script type="text/javascript">
+
+     var url = "{% url 'dotplot:data' %}";
+     DrawFedDotPlot(url);
+     console.log($("text:contains(9999)").text());
+     $("text:contains(9999)").text('Longer Run');
+
+</script>
+ <script type="text/javascript">
+
+
+
+</script>
+{% endblock javascript %}

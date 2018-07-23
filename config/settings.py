@@ -25,7 +25,7 @@ SECRET_KEY = '6ye2dw+=x$+6im@y^i8i_pxvvhu!m=y6#p8bb(n+qf5(44#=1*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dotplot-dev.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dotplot-dev.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -144,3 +144,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "www", "static")
+
+STATICFILES_DIRS = (
+  os.path.join(BASE_DIR, 'static/'),
+)
